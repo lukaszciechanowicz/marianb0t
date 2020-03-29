@@ -11,9 +11,16 @@ jobs:
     steps:
       - run: |
           VERSION=$(date +%s)
+          echo "1-------"
           ls -1 .
+          echo "2-------"
           ls $HOME
+          echo "3-------"
           cd $HOME
+          echo "4-------"
           ls -1
+          echo "5-------"
+          tree
+          echo "----"
           # docker build . --file $HOME/Dockerfile --tag lukaszciechanowicz/marianb0t:${VERSION}
           # docker run -e TWITTER_CONSUMER_KEY=${{ secrets.TWITTER_CONSUMER_KEY }} -e TWITTER_CONSUMER_SECRET=${{ secrets.TWITTER_CONSUMER_SECRET }} -e TWITTER_ACCESS_TOKEN_KEY=${{ secrets.TWITTER_ACCESS_TOKEN_KEY }} -e TWITTER_ACCESS_TOKEN_SECRET=${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }} lukaszciechanowicz/marianb0t:${VERSION}

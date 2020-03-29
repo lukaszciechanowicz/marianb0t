@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          docker run lukaszciechanowicz/marianb0t:latest -e TWITTER_CONSUMER_KEY=${{ secrets.TWITTER_CONSUMER_KEY }} -e TWITTER_CONSUMER_SECRET=${{ secrets.TWITTER_CONSUMER_SECRET }} -e TWITTER_ACCESS_TOKEN_KEY=${{ secrets.TWITTER_ACCESS_TOKEN_KEY }} -e TWITTER_ACCESS_TOKEN_SECRET=${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+          docker run -e TWITTER_CONSUMER_KEY=${{ secrets.TWITTER_CONSUMER_KEY }} -e TWITTER_CONSUMER_SECRET=${{ secrets.TWITTER_CONSUMER_SECRET }} -e TWITTER_ACCESS_TOKEN_KEY=${{ secrets.TWITTER_ACCESS_TOKEN_KEY }} -e TWITTER_ACCESS_TOKEN_SECRET=${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }} lukaszciechanowicz/marianb0t:latest

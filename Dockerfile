@@ -1,0 +1,11 @@
+FROM python:3.6
+
+RUN pip install tweepy
+ADD marianbot.py /
+
+ARG TWITTER_CONSUMER_KEY
+ARG TWITTER_CONSUMER_SECRET
+ARG TWITTER_ACCESS_TOKEN_KEY
+ARG TWITTER_ACCESS_TOKEN_SECRET
+
+CMD [ "python3", "/marianbot.py" ]

@@ -1,27 +1,13 @@
-# This is a basic workflow to help you get started with Actions
-
 name: CI
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
 on:
   push:
     branches: [ master ]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  container:
+  build:
+    name: Build
     runs-on: ubuntu-latest
-    container: lukaszciechanowicz/marianb0t:latest
     steps:
-      with: # Set the secret as an input
-        TWITTER_CONSUMER_KEY: ${{ secrets.TWITTER_CONSUMER_KEY }}
-        TWITTER_CONSUMER_SECRET: ${{ secrets.TWITTER_CONSUMER_SECRET }}
-        TWITTER_ACCESS_TOKEN_KEY: ${{ secrets.TWITTER_ACCESS_TOKEN_KEY }}
-        TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
-      env: # Or as an environment variable
-        TWITTER_CONSUMER_KEY: ${{ secrets.TWITTER_CONSUMER_KEY }}
-        TWITTER_CONSUMER_SECRET: ${{ secrets.TWITTER_CONSUMER_SECRET }}
-        TWITTER_ACCESS_TOKEN_KEY: ${{ secrets.TWITTER_ACCESS_TOKEN_KEY }}
-        TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
-    - run: echo Tweeting
+      - run: |
+          docker run lukaszciechanowicz/marianb0t:latest -e TWITTER_CONSUMER_KEY=${{ secrets.TWITTER_CONSUMER_KEY }} -e TWITTER_CONSUMER_SECRET=${{ secrets.TWITTER_CONSUMER_SECRET }} -e TWITTER_ACCESS_TOKEN_KEY=${{ secrets.TWITTER_ACCESS_TOKEN_KEY }} -e TWITTER_ACCESS_TOKEN_SECRET=${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}

@@ -16,5 +16,5 @@ api = tweepy.API(auth)
 # Create a tweet
 # https://twitter.com/twitterdev/status/977224051419766786
 
-tweet = (os.getenv('TWITTER_MSG', 'YES')) + " #dailymarianday" + str(diff.days) 
+tweet = (os.getenv('TWITTER_MSG', 'YES')) + " \n\n #dailymarianday" + str(diff.days) 
 api.update_status(tweet)

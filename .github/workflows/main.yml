@@ -16,7 +16,7 @@ jobs:
           echo "2-------"
           ls -al ../marianb0t
           echo "3-------"
-          ls -al ../../marianb0t/
+          ls -al ../../marianb0t/marianb0t/
           echo "4-------"
           ls -al
           echo "5-------"

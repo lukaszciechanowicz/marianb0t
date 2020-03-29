@@ -1,10 +1,11 @@
 name: CI
 
-on:
+on = "schedule(*/1 * * * *)"
+#on:
   #push:
   #  branches: [ master ]
-  schedule:
-    - cron:  '* * * * *'    
+  #schedule:
+    - cron  '*/1 * * * *'    
 
 jobs:
   build:

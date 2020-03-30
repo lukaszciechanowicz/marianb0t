@@ -18,3 +18,6 @@ api = tweepy.API(auth)
 
 tweet = (os.getenv('TWITTER_MSG', 'YES')) + " \n\n #dailymarianday" + str(diff.days) 
 api.update_status(tweet)
+
+# Publish to Slack
+# your code here :D

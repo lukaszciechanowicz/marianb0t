@@ -1,9 +1,9 @@
-name: Tweet
+name: CI
  
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '5 10 * * *'
+    - cron:  '37 10 * * *'
 jobs:
   build:
     name: Build

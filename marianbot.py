@@ -4,7 +4,7 @@ import datetime
 
 today = datetime.date.today()
 someday = datetime.date(2020, 3, 29) # The day marianb0t was born
-diff = someday - today
+diff = today - someday
 
 # Authenticate to Twitter
 auth = tweepy.OAuthHandler(os.environ["TWITTER_CONSUMER_KEY"], os.environ["TWITTER_CONSUMER_SECRET"])

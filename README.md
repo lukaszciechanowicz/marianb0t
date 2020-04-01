@@ -5,3 +5,7 @@ A tribute to Marian - a coworker, colleague and a badass engineer with a head fu
 And... I just wanted play with GitHub Actions.
 
 https://twitter.com/marianb0t
+
+![bar](images/bar.png?raw=true "bar")
+
+
